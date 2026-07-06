@@ -1,16 +1,78 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Howdy!</title>
-    <link rel="stylesheet" type="text/css"
-      href="http://yegor256.github.io/tacit/tacit.min.css"/>
-  </head>
-  <body>
-    <h1>Howdy stranger!</h1>
-    My name is <b>Dennis Kaulbersch</b> and I live at <b>Salem</b>, <i>Germany</i>.<br>
-    I'm an <b>agile enthusiast</b> and experienced <b>software developer</b>.<br>
-    <i>Agile software development</i>, <i>working with people</i> and <i>shipping useful software</i> are my <b>passion</b>.<br>
-    I'm <b>interested</b> in <i>agile methodology</i> and any kind of <i>new technologies</i><br><br>
-    Feel free to <a href="mailto:d.kaulbersch@gmail.com">contact</a> me.
-  </body>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dennis Kaulbersch · Agile, Digitalisierung & Veränderung</title>
+  <meta name="description" content="Dennis Kaulbersch aus Salem am Bodensee – Agile, Software und digitale Veränderung.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Startseite">DK</a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#profil">Profil</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Salem · Bodensee · Agile · Digitalisierung · Change</p>
+        <h1 id="hero-title">Hi, ich bin Dennis.</h1>
+        <p class="lead">
+          Ich verbinde agile Arbeitsweisen, Digitalisierung und Veränderung so,
+          dass aus Ideen nutzbare Lösungen werden – pragmatisch, menschlich und wirksam.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="mailto:d.kaulbersch@gmail.com">Kontakt aufnehmen</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Kurzprofil">
+        <div class="avatar" aria-hidden="true">DK</div>
+        <h2>Dennis Kaulbersch</h2>
+        <p>Agile Enthusiast · Change Agent · Community Builder</p>
+        <span class="location">📍 Salem, Germany</span>
+      </aside>
+    </section>
+
+    <section id="profil" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Wofür ich stehe</p>
+        <h2>Menschen, Technik und Veränderung zusammenbringen.</h2>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">🤝</span>
+          <h3>Agile & Zusammenarbeit</h3>
+          <p>Teams und Organisationen stärken, Komplexität greifbar machen und Arbeitsweisen entwickeln, die im Alltag funktionieren.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">💻</span>
+          <h3>Software & Technologie</h3>
+          <p>Interesse an neuer Technologie, nützlicher Software und pragmatischen Lösungen statt Selbstzweck.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">🌱</span>
+          <h3>Veränderungsbegleitung & Enablement</h3>
+          <p>Changemanagement und Servant Leadership, um Menschen in Veränderung zu befähigen und nachhaltige Entwicklung möglich zu machen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section contact">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Lass uns in Kontakt bleiben.</h2>
+      <p>Für Austausch zu Agile, Software, digitalen Ideen oder Veränderungsbegleitung.</p>
+      <a class="button primary" href="mailto:d.kaulbersch@gmail.com">E-Mail schreiben</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Dennis Kaulbersch · Built with GitHub Pages</p>
+  </footer>
+</body>
 </html>
