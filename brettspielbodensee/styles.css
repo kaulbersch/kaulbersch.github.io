@@ -243,6 +243,71 @@ footer {
   color: var(--muted);
 }
 
+.cookie-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  width: min(calc(100% - 32px), 900px);
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 250, 241, 0.94);
+  box-shadow: 0 22px 70px rgba(38, 48, 40, 0.2);
+  backdrop-filter: blur(20px);
+  transform: translateX(-50%);
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-copy strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.cookie-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-button {
+  min-height: 44px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font: inherit;
+}
+
+@media (max-width: 760px) {
+  .cookie-banner {
+    grid-template-columns: 1fr;
+    bottom: 12px;
+  }
+
+  .cookie-actions {
+    justify-content: stretch;
+  }
+
+  .cookie-actions .button {
+    flex: 1 1 180px;
+  }
+}
+
 @media (max-width: 800px) {
   .hero {
     min-height: auto;
