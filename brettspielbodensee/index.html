@@ -80,5 +80,69 @@
   <footer>
     <p>© Bodensee Brettspieltreffs · Eine private Übersicht für Brettspielfans in der Region.</p>
   </footer>
+  <div class="cookie-banner" data-cookie-banner hidden role="dialog" aria-live="polite" aria-label="Cookie-Hinweis">
+  <div class="cookie-copy">
+    <strong>Cookie-Hinweis</strong>
+    <p>
+      Diese Website nutzt keine Analyse-, Marketing- oder Tracking-Cookies. Deine Auswahl wird nur lokal gespeichert,
+      damit dieser Hinweis nicht erneut erscheint.
+    </p>
+  </div>
+
+  <div class="cookie-actions" aria-label="Cookie-Auswahl">
+    <button class="button secondary cookie-button" type="button" data-cookie-choice="necessary">
+      Nur notwendige
+    </button>
+    <button class="button primary cookie-button" type="button" data-cookie-choice="all">
+      Alle akzeptieren
+    </button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const banner = document.querySelector('[data-cookie-banner]');
+    const storageKey = 'dk-cookie-consent';
+
+    if (!banner) {
+      return;
+    }
+
+    try {
+      const existingChoice = window.localStorage.getItem(storageKey);
+      if (!existingChoice) {
+        banner.hidden = false;
+      }
+    } catch (error) {
+      banner.hidden = false;
+    }
+
+    banner.addEventListener('click', function (event) {
+      const button = event.target.closest('[data-cookie-choice]');
+
+      if (!button) {
+        return;
+      }
+
+      const choice = button.getAttribute('data-cookie-choice');
+
+      try {
+        window.localStorage.setItem(storageKey, JSON.stringify({
+          choice: choice,
+          timestamp: new Date().toISOString(),
+          version: '2026-07-07'
+        }));
+      } catch (error) {
+        // Falls localStorage blockiert ist, wird der Hinweis nur für diese Sitzung geschlossen.
+      }
+
+      banner.hidden = true;
+
+      if (choice === 'all') {
+        // Optional: Analyse-Tools oder externe Einbettungen erst hier nach Einwilligung laden.
+      }
+    });
+  }());
+</script>
 </body>
 </html>
